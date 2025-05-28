@@ -22,8 +22,22 @@ dependencies {
     // This dependency is used by the application.
     implementation libs.guava
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.6'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.mindrot:jbcrypt:0.4'
 
 }
+
+testing {
+    suites {
+        // Configure the built-in test suite
+        test {
+            // Use JUnit4 test framework
+            useJUnit('4.13.2')
+        }
+    }
+}
+
+
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
